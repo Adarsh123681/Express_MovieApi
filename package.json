@@ -5,7 +5,8 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.3.5",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "parcel": "^2.12.0"
   },
   "name": "nodejsapi",
   "version": "1.0.0",
@@ -13,7 +14,8 @@
   "main": "express.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "build": "parcel build server.js --target-node --out -dir dist"
   },
   "keywords": [
     "\"nice"
