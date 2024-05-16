@@ -1,7 +1,7 @@
 const { urlencoded } = require("body-parser");
 const express = require("express");
 const app = express()
-const PORT = 8080 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 require("dotenv").config();
 require("./dbConnection/connect");
 const routes = require("./routes/routes")
