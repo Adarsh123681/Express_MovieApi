@@ -30,10 +30,10 @@ const getMovieList = async (req, res) => {
   // FINDING DATA
   const findMovieData = await movies.find();
   if(!findMovieData){
-    res.send("DATA NOT FOUND")
+    res.status(400).send("DATA NOT FOUND")
   }
   else{
-    res.send("DATA FOUND" , findMovieData);
+    res.status(200).send(findMovieData);
   }
 };
 
@@ -45,7 +45,7 @@ const getSingleMovie = async (req, res) => {
     res.send("DATA NOT FOUND")
   }
   else{
-    res.send("DATA FOUND" , findMovieData);
+    res.send(findMovieByid);
   }
 };
 
